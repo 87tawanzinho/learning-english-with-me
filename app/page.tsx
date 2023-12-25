@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Texts from "./components/Texts";
+import dynamic from "next/dynamic";
+const DynamicTexts = dynamic(() => import("./components/Texts"), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
@@ -13,7 +17,7 @@ export default function Home() {
           para aprender ✔
         </p>
       </div>
-      <Texts />
+      <DynamicTexts />
     </main>
   );
 }
