@@ -81,7 +81,7 @@ export default function Texts() {
             } w-11/12 lg:w-1/2 h-40 mt-4 relative overflow-y-auto pt-10 px-8 mt-10 pb-8`}
           >
             <p>
-              <p>
+              <p className="text-zinc-400">
                 {seeTranslation.find((t) => t.id === item.id)?.text ||
                   item.englishText}
               </p>
