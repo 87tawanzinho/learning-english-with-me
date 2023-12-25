@@ -20,7 +20,9 @@ export default function Texts() {
   };
 
   useEffect(() => {
-    localStorage.setItem("markedTexts", JSON.stringify(texts));
+    if (isClient) {
+      localStorage.setItem("markedTexts", JSON.stringify(texts));
+    }
   }, [texts]);
 
   return (
