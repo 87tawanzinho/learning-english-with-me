@@ -49,7 +49,7 @@ export default function Texts() {
       </p>
 
       {textSections.map((item) => (
-        <div key={item.id} className="flex flex-col h-screen items-center ">
+        <div key={item.id} className="flex flex-col h-screen items-center  ">
           <div className="flex justify-between w-11/12 lg:w-1/2 mt-10">
             <p>{item.title}</p>
             <button
@@ -76,6 +76,8 @@ export default function Texts() {
           </div>
         </div>
       ))}
+
+      <div className="pb-10"></div>
     </div>
   );
 }
