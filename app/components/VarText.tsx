@@ -62,8 +62,8 @@ export const textSections: TextSection[] = [
 
   {
     id: "text3",
-    title: "Marta",
-    englishText: MartaEnglish,
-    ptText: MartaPt,
+    title: "Paintball",
+    englishText: PaintballEnglish,
+    ptText: PaintballPt,
   },
 ];
