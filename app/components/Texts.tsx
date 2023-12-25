@@ -3,7 +3,8 @@ import { useEffect, useState } from "react";
 
 type markedText = string;
 export default function Texts() {
-  const storedText = localStorage.getItem("markedTexts");
+  const isClient = typeof window !== undefined;
+  const storedText = isClient ? localStorage.getItem("markedTexts") : null;
   const [seeTranslation, setSeeTranslation] = useState(false);
   const initialTexts: markedText[] = storedText ? JSON.parse(storedText) : [];
 
