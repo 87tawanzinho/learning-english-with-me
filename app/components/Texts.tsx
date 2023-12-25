@@ -36,6 +36,19 @@ export default function Texts() {
     setTexts(updatedMarkedTexts);
   };
 
+  const sortedItems = textSections.sort((a, b) => {
+    const aIsMarked = texts.includes(a.id);
+    const bIsMarked = texts.includes(b.id);
+
+    if (aIsMarked && !bIsMarked) {
+      return 1; // Move marked item down
+    } else if (!aIsMarked && bIsMarked) {
+      return -1; // Move marked item up
+    }
+
+    return 0; // Keep the order unchanged
+  });
+
   useEffect(() => {
     if (isClient) {
       localStorage.setItem("markedTexts", JSON.stringify(texts));
@@ -48,7 +61,7 @@ export default function Texts() {
         Textos Intermediarios
       </p>
 
-      {textSections.map((item) => (
+      {sortedItems.map((item) => (
         <div key={item.id} className="flex flex-col h-screen items-center  ">
           <div className="flex justify-between w-11/12 lg:w-1/2 mt-10">
             <p>{item.title}</p>
