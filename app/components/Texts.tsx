@@ -77,7 +77,7 @@ export default function Texts() {
               handleText(item.id);
             }}
             className={`${
-              !texts.includes(item.id) ? "bg-zinc-900" : "bg-green-900"
+              !texts.includes(item.id) ? "bg-black" : "bg-green-900"
             } w-11/12 lg:w-1/2 h-40 mt-4 relative overflow-y-auto pt-10 px-8 mt-10 pb-8`}
           >
             <p>
