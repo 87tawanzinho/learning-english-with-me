@@ -26,7 +26,8 @@ export default function Texts() {
   }, [texts]);
 
   return (
-    <div className="flex flex-col h-screen items-center mt-20 ">
+    <div className="flex flex-col h-screen items-center mt-5 ">
+      <p className="text-xl mb-10 text-yellow-200">Textos Intermediarios</p>
       <div className="flex justify-around items-center mb-4 w-11/12 lg:3/6">
         <p className="">Jenna</p>
         <button
